@@ -24,5 +24,3 @@ RUN apk add --update --no-cache \
 RUN apk add yaml-dev
 
 COPY ansible.cfg .
-
-#ENTRYPOINT ["ansible"]
