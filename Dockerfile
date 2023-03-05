@@ -4,7 +4,7 @@ ENV ANSIBLE_FORCE_COLOR="true"
 ENV ANSIBLE_HOST_KEY_CHECKING="false"
 ENV ANSIBLE_CONFIG="/ansible.cfg"
 
-COPY ansible.cfg /ansible.cfg
+COPY ansible.cfg entrypoint.sh /
 
 RUN apk add --update --no-cache \
     git \
@@ -22,3 +22,5 @@ RUN apk add --update --no-cache \
     gcc \
     && pip install --no-cache-dir ansible \
     && apk del .build-deps
+
+ENTRYPOINT ["/bin/ash", "/entrypoint.sh"]
