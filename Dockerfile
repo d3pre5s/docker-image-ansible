@@ -1,4 +1,6 @@
 FROM python:3-alpine
+LABEL vendor1="DeusOps"
+LABEL vendor2="Konstantin Deepezh aka D3pRe5s"
 
 ENV ANSIBLE_FORCE_COLOR="true"
 ENV ANSIBLE_HOST_KEY_CHECKING="false"
